@@ -1,6 +1,10 @@
 using System;
+using System.Data.Entity;
 using System.Windows.Forms;
+using Unity;
+using Unity.Lifetime;
 using CuaHangXeMay.Forms;
+using CuaHangXeMay.Models;
 
 namespace CuaHangXeMay
 {
@@ -9,9 +13,20 @@ namespace CuaHangXeMay
         [STAThread]
         static void Main()
         {
+            IUnityContainer container = new UnityContainer();
+            RegisterServices(container);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDangNhap());
+            Application.Run(container.Resolve<FormChinh>());
+        }
+
+        static void RegisterServices(IUnityContainer container)
+        {
+            container.RegisterType<DbContext, CuaHangXeEntities>(new TransientLifetimeManager());
+
+            container.RegisterType<FormDangNhap>();
+            container.RegisterType<FormChinh>();
         }
     }
 }

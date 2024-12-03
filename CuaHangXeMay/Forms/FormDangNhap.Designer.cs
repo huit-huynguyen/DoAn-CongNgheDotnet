@@ -28,33 +28,33 @@ namespace CuaHangXeMay.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelLogin = new System.Windows.Forms.Panel();
+            this.pnlDangNhap = new System.Windows.Forms.Panel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.lblMatKhau = new System.Windows.Forms.Label();
             this.lblTaiKhoan = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblTieuDe = new System.Windows.Forms.Label();
             this.lblThongBaoLoi = new System.Windows.Forms.Label();
-            this.panelLogin.SuspendLayout();
+            this.pnlDangNhap.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelLogin
+            // pnlDangNhap
             // 
-            this.panelLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelLogin.BackColor = System.Drawing.Color.White;
-            this.panelLogin.Controls.Add(this.btnDangNhap);
-            this.panelLogin.Controls.Add(this.txtMatKhau);
-            this.panelLogin.Controls.Add(this.txtTaiKhoan);
-            this.panelLogin.Controls.Add(this.lblMatKhau);
-            this.panelLogin.Controls.Add(this.lblTaiKhoan);
-            this.panelLogin.Controls.Add(this.lblTitle);
-            this.panelLogin.Controls.Add(this.lblThongBaoLoi);
-            this.panelLogin.Location = new System.Drawing.Point(200, 75);
-            this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Padding = new System.Windows.Forms.Padding(20);
-            this.panelLogin.Size = new System.Drawing.Size(400, 300);
-            this.panelLogin.TabIndex = 0;
+            this.pnlDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlDangNhap.BackColor = System.Drawing.Color.White;
+            this.pnlDangNhap.Controls.Add(this.btnDangNhap);
+            this.pnlDangNhap.Controls.Add(this.txtMatKhau);
+            this.pnlDangNhap.Controls.Add(this.txtTaiKhoan);
+            this.pnlDangNhap.Controls.Add(this.lblMatKhau);
+            this.pnlDangNhap.Controls.Add(this.lblTaiKhoan);
+            this.pnlDangNhap.Controls.Add(this.lblTieuDe);
+            this.pnlDangNhap.Controls.Add(this.lblThongBaoLoi);
+            this.pnlDangNhap.Location = new System.Drawing.Point(200, 75);
+            this.pnlDangNhap.Name = "pnlDangNhap";
+            this.pnlDangNhap.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlDangNhap.Size = new System.Drawing.Size(400, 300);
+            this.pnlDangNhap.TabIndex = 0;
             // 
             // btnDangNhap
             // 
@@ -107,15 +107,15 @@ namespace CuaHangXeMay.Forms
             this.lblTaiKhoan.TabIndex = 4;
             this.lblTaiKhoan.Text = "Tài khoản:";
             // 
-            // lblTitle
+            // lblTieuDe
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(110, 30);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(181, 37);
-            this.lblTitle.TabIndex = 5;
-            this.lblTitle.Text = "ĐĂNG NHẬP";
+            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTieuDe.Location = new System.Drawing.Point(110, 30);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(181, 37);
+            this.lblTieuDe.TabIndex = 5;
+            this.lblTieuDe.Text = "ĐĂNG NHẬP";
             // 
             // lblThongBaoLoi
             // 
@@ -135,25 +135,25 @@ namespace CuaHangXeMay.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelLogin);
+            this.Controls.Add(this.pnlDangNhap);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập - Cửa hàng xe máy";
             this.Load += new System.EventHandler(this.FormDangNhap_Load);
-            this.panelLogin.ResumeLayout(false);
-            this.panelLogin.PerformLayout();
+            this.pnlDangNhap.ResumeLayout(false);
+            this.pnlDangNhap.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
-        private System.Windows.Forms.Panel panelLogin;
+        private System.Windows.Forms.Panel pnlDangNhap;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.Label lblMatKhau;
         private System.Windows.Forms.Label lblTaiKhoan;
-        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblTieuDe;
         private System.Windows.Forms.Label lblThongBaoLoi;
 
         #endregion

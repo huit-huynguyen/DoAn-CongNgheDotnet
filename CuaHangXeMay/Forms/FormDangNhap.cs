@@ -7,9 +7,17 @@ namespace CuaHangXeMay.Forms
 {
     public partial class FormDangNhap : Form
     {
+        private readonly CuaHangXeEntities _dbContext;
+
         public FormDangNhap()
         {
             InitializeComponent();
+        }
+
+        public FormDangNhap(CuaHangXeEntities dbContext)
+        {
+            InitializeComponent();
+            _dbContext = dbContext;
         }
 
         private void FormDangNhap_Load(object sender, EventArgs e)
@@ -31,17 +39,14 @@ namespace CuaHangXeMay.Forms
                 return;
             }
 
-            using (var dbContext = new CuaHangXeEntities())
+            var nhanVien = _dbContext.DsNhanVien
+                .FirstOrDefault(nv => nv.Ma == taiKhoan && nv.MatKhau == matKhau);
+            if (nhanVien == null)
             {
-                var nhanVien = dbContext.DsNhanVien
-                    .FirstOrDefault(nv => nv.Ma == taiKhoan && nv.MatKhau == matKhau);
-                if (nhanVien == null)
-                {
-                    lblThongBaoLoi.Text = "Tài khoản hoặc mật khẩu không chính xác!";
-                    txtMatKhau.Clear();
-                    txtMatKhau.Focus();
-                    return;
-                }
+                lblThongBaoLoi.Text = "Tài khoản hoặc mật khẩu không chính xác!";
+                txtMatKhau.Clear();
+                txtMatKhau.Focus();
+                return;
             }
 
             lblThongBaoLoi.Text = string.Empty;
