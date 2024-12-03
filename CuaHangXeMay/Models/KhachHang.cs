@@ -17,8 +17,8 @@ namespace CuaHangXeMay.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KhachHang()
         {
-            this.don_hang = new HashSet<DonHang>();
-            this.phieu_sua = new HashSet<PhieuSua>();
+            this.DsDonHang = new HashSet<DonHang>();
+            this.DsPhieuSua = new HashSet<PhieuSua>();
         }
     
         public string Ma { get; set; }
@@ -30,8 +30,8 @@ namespace CuaHangXeMay.Models
         public string SoDienThoai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DonHang> don_hang { get; set; }
+        public virtual ICollection<DonHang> DsDonHang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuSua> phieu_sua { get; set; }
+        public virtual ICollection<PhieuSua> DsPhieuSua { get; set; }
     }
 }

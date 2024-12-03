@@ -15,14 +15,14 @@ namespace CuaHangXeMay.Models
     public partial class ChiTietSuaChua
     {
         public string Ma { get; set; }
-        public string MaPhieuNhap { get; set; }
-        public string MaLinhKien { get; set; }
+        private string MaPhieuNhap { get; set; }
+        private string MaLinhKien { get; set; }
         public string GhiChu { get; set; }
         public decimal GiaSua { get; set; }
         public int SoLuong { get; set; }
         public decimal ThanhTien { get; set; }
     
-        public virtual LinhKien linh_kien { get; set; }
-        public virtual PhieuSua phieu_sua { get; set; }
+        public virtual LinhKien LinhKien { get; set; }
+        public virtual PhieuSua PhieuSua { get; set; }
     }
 }

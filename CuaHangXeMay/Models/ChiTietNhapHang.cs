@@ -15,15 +15,15 @@ namespace CuaHangXeMay.Models
     public partial class ChiTietNhapHang
     {
         public string Ma { get; set; }
-        public string MaPhieuNhap { get; set; }
-        public string MaXe { get; set; }
-        public string MaLinhKien { get; set; }
+        private string MaPhieuNhap { get; set; }
+        private string MaXe { get; set; }
+        private string MaLinhKien { get; set; }
         public decimal GiaNhap { get; set; }
         public int SoLuong { get; set; }
         public decimal ThanhTien { get; set; }
     
-        public virtual LinhKien linh_kien { get; set; }
-        public virtual PhieuNhap phieu_nhap { get; set; }
-        public virtual Xe xe { get; set; }
+        public virtual LinhKien LinhKien { get; set; }
+        public virtual PhieuNhap PhieuNhap { get; set; }
+        public virtual Xe Xe { get; set; }
     }
 }

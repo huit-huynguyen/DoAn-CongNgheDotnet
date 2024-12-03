@@ -17,13 +17,13 @@ namespace CuaHangXeMay.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PhieuSua()
         {
-            this.chi_tiet_sua_chua = new HashSet<ChiTietSuaChua>();
+            this.DsChiTiet = new HashSet<ChiTietSuaChua>();
         }
     
         public string Ma { get; set; }
-        public string MaNhanVien { get; set; }
-        public string MaKhachHang { get; set; }
-        public string MaXe { get; set; }
+        private string MaNhanVien { get; set; }
+        private string MaKhachHang { get; set; }
+        private string MaXe { get; set; }
         public System.DateTime NgayLap { get; set; }
         public Nullable<System.DateTime> NgayTra { get; set; }
         public string MoTaLoi { get; set; }
@@ -31,9 +31,9 @@ namespace CuaHangXeMay.Models
         public decimal TongTien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietSuaChua> chi_tiet_sua_chua { get; set; }
-        public virtual KhachHang khach_hang { get; set; }
-        public virtual NhanVien nhan_vien { get; set; }
-        public virtual Xe xe { get; set; }
+        public virtual ICollection<ChiTietSuaChua> DsChiTiet { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
+        public virtual Xe Xe { get; set; }
     }
 }

@@ -17,9 +17,9 @@ namespace CuaHangXeMay.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhaCungCap()
         {
-            this.linh_kien = new HashSet<LinhKien>();
-            this.phieu_nhap = new HashSet<PhieuNhap>();
-            this.xes = new HashSet<Xe>();
+            this.DsLinhKien = new HashSet<LinhKien>();
+            this.DsPhieuNhap = new HashSet<PhieuNhap>();
+            this.DsXe = new HashSet<Xe>();
         }
     
         public string Ma { get; set; }
@@ -29,10 +29,10 @@ namespace CuaHangXeMay.Models
         public string SoDienThoai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LinhKien> linh_kien { get; set; }
+        public virtual ICollection<LinhKien> DsLinhKien { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuNhap> phieu_nhap { get; set; }
+        public virtual ICollection<PhieuNhap> DsPhieuNhap { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Xe> xes { get; set; }
+        public virtual ICollection<Xe> DsXe { get; set; }
     }
 }

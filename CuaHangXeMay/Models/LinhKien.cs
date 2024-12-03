@@ -17,8 +17,8 @@ namespace CuaHangXeMay.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LinhKien()
         {
-            this.chi_tiet_nhap_hang = new HashSet<ChiTietNhapHang>();
-            this.chi_tiet_sua_chua = new HashSet<ChiTietSuaChua>();
+            this.DsChiTietNhapHang = new HashSet<ChiTietNhapHang>();
+            this.DsChiTietSuaChua = new HashSet<ChiTietSuaChua>();
         }
     
         public string Ma { get; set; }
@@ -26,13 +26,13 @@ namespace CuaHangXeMay.Models
         public string MoTa { get; set; }
         public decimal DonGia { get; set; }
         public int SoLuong { get; set; }
-        public string MaNhaCungCap { get; set; }
+        private string MaNhaCungCap { get; set; }
         public string FileHinhAnh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietNhapHang> chi_tiet_nhap_hang { get; set; }
+        public virtual ICollection<ChiTietNhapHang> DsChiTietNhapHang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietSuaChua> chi_tiet_sua_chua { get; set; }
-        public virtual NhaCungCap nha_cung_cap { get; set; }
+        public virtual ICollection<ChiTietSuaChua> DsChiTietSuaChua { get; set; }
+        public virtual NhaCungCap NhaCungCap { get; set; }
     }
 }

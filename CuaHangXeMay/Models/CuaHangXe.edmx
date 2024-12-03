@@ -416,56 +416,56 @@
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
+          <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
           <Property Name="GiaBan" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" Nullable="false" />
           <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <NavigationProperty Name="don_hang" Relationship="Self.FK__chi_tiet___ma_dh__5BE2A6F2" FromRole="chi_tiet_don_hang" ToRole="don_hang" />
-          <NavigationProperty Name="xe" Relationship="Self.FK__chi_tiet___ma_xe__5CD6CB2B" FromRole="chi_tiet_don_hang" ToRole="xe" />
+          <NavigationProperty Name="DonHang" Relationship="Self.FK__chi_tiet___ma_dh__5BE2A6F2" FromRole="chi_tiet_don_hang" ToRole="don_hang" />
+          <NavigationProperty Name="Xe" Relationship="Self.FK__chi_tiet___ma_xe__5CD6CB2B" FromRole="chi_tiet_don_hang" ToRole="xe" />
         </EntityType>
         <EntityType Name="ChiTietNhapHang">
           <Key>
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <Property Name="MaLinhKien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
+          <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
+          <Property Name="MaLinhKien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
           <Property Name="GiaNhap" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" Nullable="false" />
           <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <NavigationProperty Name="linh_kien" Relationship="Self.FK__chi_tiet___ma_lk__7E37BEF6" FromRole="chi_tiet_nhap_hang" ToRole="linh_kien" />
-          <NavigationProperty Name="phieu_nhap" Relationship="Self.FK__chi_tiet___ma_pn__7C4F7684" FromRole="chi_tiet_nhap_hang" ToRole="phieu_nhap" />
-          <NavigationProperty Name="xe" Relationship="Self.FK__chi_tiet___ma_xe__7D439ABD" FromRole="chi_tiet_nhap_hang" ToRole="xe" />
+          <NavigationProperty Name="LinhKien" Relationship="Self.FK__chi_tiet___ma_lk__7E37BEF6" FromRole="chi_tiet_nhap_hang" ToRole="linh_kien" />
+          <NavigationProperty Name="PhieuNhap" Relationship="Self.FK__chi_tiet___ma_pn__7C4F7684" FromRole="chi_tiet_nhap_hang" ToRole="phieu_nhap" />
+          <NavigationProperty Name="Xe" Relationship="Self.FK__chi_tiet___ma_xe__7D439ABD" FromRole="chi_tiet_nhap_hang" ToRole="xe" />
         </EntityType>
         <EntityType Name="ChiTietSuaChua">
           <Key>
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaLinhKien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
+          <Property Name="MaLinhKien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
           <Property Name="GhiChu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="GiaSua" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" Nullable="false" />
           <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <NavigationProperty Name="linh_kien" Relationship="Self.FK__chi_tiet___ma_lk__6E01572D" FromRole="chi_tiet_sua_chua" ToRole="linh_kien" />
-          <NavigationProperty Name="phieu_sua" Relationship="Self.FK__chi_tiet___ma_ps__6D0D32F4" FromRole="chi_tiet_sua_chua" ToRole="phieu_sua" />
+          <NavigationProperty Name="LinhKien" Relationship="Self.FK__chi_tiet___ma_lk__6E01572D" FromRole="chi_tiet_sua_chua" ToRole="linh_kien" />
+          <NavigationProperty Name="PhieuSua" Relationship="Self.FK__chi_tiet___ma_ps__6D0D32F4" FromRole="chi_tiet_sua_chua" ToRole="phieu_sua" />
         </EntityType>
         <EntityType Name="DonHang">
           <Key>
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
+          <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
           <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TinhTrang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <NavigationProperty Name="chi_tiet_don_hang" Relationship="Self.FK__chi_tiet___ma_dh__5BE2A6F2" FromRole="don_hang" ToRole="chi_tiet_don_hang" />
-          <NavigationProperty Name="khach_hang" Relationship="Self.FK__don_hang__ma_kh__5441852A" FromRole="don_hang" ToRole="khach_hang" />
-          <NavigationProperty Name="nhan_vien" Relationship="Self.FK__don_hang__ma_nv__534D60F1" FromRole="don_hang" ToRole="nhan_vien" />
+          <NavigationProperty Name="DsChiTiet" Relationship="Self.FK__chi_tiet___ma_dh__5BE2A6F2" FromRole="don_hang" ToRole="chi_tiet_don_hang" />
+          <NavigationProperty Name="KhachHang" Relationship="Self.FK__don_hang__ma_kh__5441852A" FromRole="don_hang" ToRole="khach_hang" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK__don_hang__ma_nv__534D60F1" FromRole="don_hang" ToRole="nhan_vien" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
@@ -478,8 +478,8 @@
           <Property Name="DiaChi" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DiaChiEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="don_hang" Relationship="Self.FK__don_hang__ma_kh__5441852A" FromRole="khach_hang" ToRole="don_hang" />
-          <NavigationProperty Name="phieu_sua" Relationship="Self.FK__phieu_sua__ma_kh__6477ECF3" FromRole="khach_hang" ToRole="phieu_sua" />
+          <NavigationProperty Name="DsDonHang" Relationship="Self.FK__don_hang__ma_kh__5441852A" FromRole="khach_hang" ToRole="don_hang" />
+          <NavigationProperty Name="DsPhieuSua" Relationship="Self.FK__phieu_sua__ma_kh__6477ECF3" FromRole="khach_hang" ToRole="phieu_sua" />
         </EntityType>
         <EntityType Name="LinhKien">
           <Key>
@@ -490,11 +490,11 @@
           <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" Nullable="false" />
-          <Property Name="MaNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
           <Property Name="FileHinhAnh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="chi_tiet_nhap_hang" Relationship="Self.FK__chi_tiet___ma_lk__7E37BEF6" FromRole="linh_kien" ToRole="chi_tiet_nhap_hang" />
-          <NavigationProperty Name="chi_tiet_sua_chua" Relationship="Self.FK__chi_tiet___ma_lk__6E01572D" FromRole="linh_kien" ToRole="chi_tiet_sua_chua" />
-          <NavigationProperty Name="nha_cung_cap" Relationship="Self.FK__linh_kien__ma_nc__45F365D3" FromRole="linh_kien" ToRole="nha_cung_cap" />
+          <NavigationProperty Name="DsChiTietNhapHang" Relationship="Self.FK__chi_tiet___ma_lk__7E37BEF6" FromRole="linh_kien" ToRole="chi_tiet_nhap_hang" />
+          <NavigationProperty Name="DsChiTietSuaChua" Relationship="Self.FK__chi_tiet___ma_lk__6E01572D" FromRole="linh_kien" ToRole="chi_tiet_sua_chua" />
+          <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__linh_kien__ma_nc__45F365D3" FromRole="linh_kien" ToRole="nha_cung_cap" />
         </EntityType>
         <EntityType Name="NhaCungCap">
           <Key>
@@ -505,9 +505,9 @@
           <Property Name="DiaChi" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DiaChiEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="linh_kien" Relationship="Self.FK__linh_kien__ma_nc__45F365D3" FromRole="nha_cung_cap" ToRole="linh_kien" />
-          <NavigationProperty Name="phieu_nhap" Relationship="Self.FK__phieu_nha__ma_nc__75A278F5" FromRole="nha_cung_cap" ToRole="phieu_nhap" />
-          <NavigationProperty Name="xes" Relationship="Self.FK__xe__ma_ncc__3F466844" FromRole="nha_cung_cap" ToRole="xe" />
+          <NavigationProperty Name="DsLinhKien" Relationship="Self.FK__linh_kien__ma_nc__45F365D3" FromRole="nha_cung_cap" ToRole="linh_kien" />
+          <NavigationProperty Name="DsPhieuNhap" Relationship="Self.FK__phieu_nha__ma_nc__75A278F5" FromRole="nha_cung_cap" ToRole="phieu_nhap" />
+          <NavigationProperty Name="DsXe" Relationship="Self.FK__xe__ma_ncc__3F466844" FromRole="nha_cung_cap" ToRole="xe" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -522,40 +522,40 @@
           <Property Name="DiaChi" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DiaChiEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="don_hang" Relationship="Self.FK__don_hang__ma_nv__534D60F1" FromRole="nhan_vien" ToRole="don_hang" />
-          <NavigationProperty Name="phieu_nhap" Relationship="Self.FK__phieu_nha__ma_nv__74AE54BC" FromRole="nhan_vien" ToRole="phieu_nhap" />
-          <NavigationProperty Name="phieu_sua" Relationship="Self.FK__phieu_sua__ma_nv__6383C8BA" FromRole="nhan_vien" ToRole="phieu_sua" />
+          <NavigationProperty Name="DsDonHang" Relationship="Self.FK__don_hang__ma_nv__534D60F1" FromRole="nhan_vien" ToRole="don_hang" />
+          <NavigationProperty Name="DsPhieuNhap" Relationship="Self.FK__phieu_nha__ma_nv__74AE54BC" FromRole="nhan_vien" ToRole="phieu_nhap" />
+          <NavigationProperty Name="DsPhieuSua" Relationship="Self.FK__phieu_sua__ma_nv__6383C8BA" FromRole="nhan_vien" ToRole="phieu_sua" />
         </EntityType>
         <EntityType Name="PhieuNhap">
           <Key>
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
+          <Property Name="MaNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
           <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <NavigationProperty Name="chi_tiet_nhap_hang" Relationship="Self.FK__chi_tiet___ma_pn__7C4F7684" FromRole="phieu_nhap" ToRole="chi_tiet_nhap_hang" />
-          <NavigationProperty Name="nha_cung_cap" Relationship="Self.FK__phieu_nha__ma_nc__75A278F5" FromRole="phieu_nhap" ToRole="nha_cung_cap" />
-          <NavigationProperty Name="nhan_vien" Relationship="Self.FK__phieu_nha__ma_nv__74AE54BC" FromRole="phieu_nhap" ToRole="nhan_vien" />
+          <NavigationProperty Name="DsChiTiet" Relationship="Self.FK__chi_tiet___ma_pn__7C4F7684" FromRole="phieu_nhap" ToRole="chi_tiet_nhap_hang" />
+          <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__phieu_nha__ma_nc__75A278F5" FromRole="phieu_nhap" ToRole="nha_cung_cap" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK__phieu_nha__ma_nv__74AE54BC" FromRole="phieu_nhap" ToRole="nhan_vien" />
         </EntityType>
         <EntityType Name="PhieuSua">
           <Key>
             <PropertyRef Name="Ma" />
           </Key>
           <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
+          <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
+          <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
           <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="NgayTra" Type="DateTime" Precision="0" />
           <Property Name="MoTaLoi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TinhTrang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <NavigationProperty Name="chi_tiet_sua_chua" Relationship="Self.FK__chi_tiet___ma_ps__6D0D32F4" FromRole="phieu_sua" ToRole="chi_tiet_sua_chua" />
-          <NavigationProperty Name="khach_hang" Relationship="Self.FK__phieu_sua__ma_kh__6477ECF3" FromRole="phieu_sua" ToRole="khach_hang" />
-          <NavigationProperty Name="nhan_vien" Relationship="Self.FK__phieu_sua__ma_nv__6383C8BA" FromRole="phieu_sua" ToRole="nhan_vien" />
-          <NavigationProperty Name="xe" Relationship="Self.FK__phieu_sua__ma_xe__656C112C" FromRole="phieu_sua" ToRole="xe" />
+          <NavigationProperty Name="DsChiTiet" Relationship="Self.FK__chi_tiet___ma_ps__6D0D32F4" FromRole="phieu_sua" ToRole="chi_tiet_sua_chua" />
+          <NavigationProperty Name="KhachHang" Relationship="Self.FK__phieu_sua__ma_kh__6477ECF3" FromRole="phieu_sua" ToRole="khach_hang" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK__phieu_sua__ma_nv__6383C8BA" FromRole="phieu_sua" ToRole="nhan_vien" />
+          <NavigationProperty Name="Xe" Relationship="Self.FK__phieu_sua__ma_xe__656C112C" FromRole="phieu_sua" ToRole="xe" />
         </EntityType>
         <EntityType Name="Xe">
           <Key>
@@ -568,12 +568,12 @@
           <Property Name="BienSoXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" Nullable="false" />
-          <Property Name="MaNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" a:GetterAccess="Private" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Private" />
           <Property Name="FileHinhAnh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="chi_tiet_don_hang" Relationship="Self.FK__chi_tiet___ma_xe__5CD6CB2B" FromRole="xe" ToRole="chi_tiet_don_hang" />
-          <NavigationProperty Name="chi_tiet_nhap_hang" Relationship="Self.FK__chi_tiet___ma_xe__7D439ABD" FromRole="xe" ToRole="chi_tiet_nhap_hang" />
-          <NavigationProperty Name="nha_cung_cap" Relationship="Self.FK__xe__ma_ncc__3F466844" FromRole="xe" ToRole="nha_cung_cap" />
-          <NavigationProperty Name="phieu_sua" Relationship="Self.FK__phieu_sua__ma_xe__656C112C" FromRole="xe" ToRole="phieu_sua" />
+          <NavigationProperty Name="DsChiTietDonHang" Relationship="Self.FK__chi_tiet___ma_xe__5CD6CB2B" FromRole="xe" ToRole="chi_tiet_don_hang" />
+          <NavigationProperty Name="DsChiTietNhapHang" Relationship="Self.FK__chi_tiet___ma_xe__7D439ABD" FromRole="xe" ToRole="chi_tiet_nhap_hang" />
+          <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__xe__ma_ncc__3F466844" FromRole="xe" ToRole="nha_cung_cap" />
+          <NavigationProperty Name="DsPhieuSua" Relationship="Self.FK__phieu_sua__ma_xe__656C112C" FromRole="xe" ToRole="phieu_sua" />
         </EntityType>
         <Association Name="FK__chi_tiet___ma_dh__5BE2A6F2">
           <End Role="don_hang" Type="CuaHangXeModel.DonHang" Multiplicity="1" />

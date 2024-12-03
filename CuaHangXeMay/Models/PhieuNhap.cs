@@ -17,18 +17,18 @@ namespace CuaHangXeMay.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PhieuNhap()
         {
-            this.chi_tiet_nhap_hang = new HashSet<ChiTietNhapHang>();
+            this.DsChiTiet = new HashSet<ChiTietNhapHang>();
         }
     
         public string Ma { get; set; }
-        public string MaNhanVien { get; set; }
-        public string MaNhaCungCap { get; set; }
+        private string MaNhanVien { get; set; }
+        private string MaNhaCungCap { get; set; }
         public System.DateTime NgayLap { get; set; }
         public decimal TongTien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietNhapHang> chi_tiet_nhap_hang { get; set; }
-        public virtual NhaCungCap nha_cung_cap { get; set; }
-        public virtual NhanVien nhan_vien { get; set; }
+        public virtual ICollection<ChiTietNhapHang> DsChiTiet { get; set; }
+        public virtual NhaCungCap NhaCungCap { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
     }
 }

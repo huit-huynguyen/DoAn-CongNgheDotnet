@@ -15,13 +15,13 @@ namespace CuaHangXeMay.Models
     public partial class ChiTietDonHang
     {
         public string Ma { get; set; }
-        public string MaDonHang { get; set; }
-        public string MaXe { get; set; }
+        private string MaDonHang { get; set; }
+        private string MaXe { get; set; }
         public decimal GiaBan { get; set; }
         public int SoLuong { get; set; }
         public decimal ThanhTien { get; set; }
     
-        public virtual DonHang don_hang { get; set; }
-        public virtual Xe xe { get; set; }
+        public virtual DonHang DonHang { get; set; }
+        public virtual Xe Xe { get; set; }
     }
 }
