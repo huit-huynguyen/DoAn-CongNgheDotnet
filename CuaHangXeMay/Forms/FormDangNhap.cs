@@ -1,5 +1,7 @@
 using System;
+using System.Linq;
 using System.Windows.Forms;
+using CuaHangXeMay.Models;
 
 namespace CuaHangXeMay.Forms
 {
@@ -19,19 +21,27 @@ namespace CuaHangXeMay.Forms
         {
             lblThongBaoLoi.Visible = true;
 
-            if (string.IsNullOrWhiteSpace(txtTaiKhoan.Text) && string.IsNullOrWhiteSpace(txtMatKhau.Text))
+            var taiKhoan = txtTaiKhoan.Text.Trim();
+            var matKhau = txtMatKhau.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(taiKhoan) && string.IsNullOrWhiteSpace(matKhau))
             {
                 lblThongBaoLoi.Text = "Vui lòng nhập tài khoản và mật khẩu!";
                 txtTaiKhoan.Focus();
                 return;
             }
 
-            if (txtTaiKhoan.Text != "admin" || txtMatKhau.Text != "password")
+            using (var dbContext = new CuaHangXeEntities())
             {
-                lblThongBaoLoi.Text = "Tài khoản hoặc mật khẩu không chính xác!";
-                txtMatKhau.Clear();
-                txtMatKhau.Focus();
-                return;
+                var nhanVien = dbContext.DsNhanVien
+                    .FirstOrDefault(nv => nv.Ma == taiKhoan && nv.MatKhau == matKhau);
+                if (nhanVien == null)
+                {
+                    lblThongBaoLoi.Text = "Tài khoản hoặc mật khẩu không chính xác!";
+                    txtMatKhau.Clear();
+                    txtMatKhau.Focus();
+                    return;
+                }
             }
 
             lblThongBaoLoi.Text = string.Empty;

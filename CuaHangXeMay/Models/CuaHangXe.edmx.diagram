@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0b68f93f019a4cf68add678fae105d52" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="CuaHangXeModel.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHangXeModel.ChiTietNhapHang" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHangXeModel.ChiTietSuaChua" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHangXeModel.DonHang" Width="1.5" PointX="3" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHangXeModel.KhachHang" Width="1.5" PointX="6" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHangXeModel.LinhKien" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHangXeModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHangXeModel.NhanVien" Width="1.5" PointX="6" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHangXeModel.PhieuNhap" Width="1.5" PointX="8" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHangXeModel.PhieuSua" Width="1.5" PointX="8.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuaHangXeModel.Xe" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="CuaHangXeModel.FK__chi_tiet___ma_dh__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__chi_tiet___ma_xe__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__chi_tiet___ma_lk__7E37BEF6" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__chi_tiet___ma_pn__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__chi_tiet___ma_xe__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__chi_tiet___ma_lk__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__chi_tiet___ma_ps__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__don_hang__ma_kh__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__don_hang__ma_nv__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__phieu_sua__ma_kh__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__linh_kien__ma_nc__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__phieu_nha__ma_nc__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__xe__ma_ncc__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__phieu_nha__ma_nv__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__phieu_sua__ma_nv__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="CuaHangXeModel.FK__phieu_sua__ma_xe__656C112C" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

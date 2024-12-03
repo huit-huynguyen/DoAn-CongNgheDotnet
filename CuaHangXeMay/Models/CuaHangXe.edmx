@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CuaHangXeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="chi_tiet_don_hang">
+          <Key>
+            <PropertyRef Name="ma_ctdh" />
+          </Key>
+          <Property Name="ma_ctdh" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_dh" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_xe" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="gia_ban" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="so_luong" Type="int" Nullable="false" />
+          <Property Name="thanh_tien" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="chi_tiet_nhap_hang">
+          <Key>
+            <PropertyRef Name="ma_ctnh" />
+          </Key>
+          <Property Name="ma_ctnh" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_pn" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_xe" Type="char" MaxLength="10" />
+          <Property Name="ma_lk" Type="char" MaxLength="10" />
+          <Property Name="gia_nhap" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="so_luong" Type="int" Nullable="false" />
+          <Property Name="thanh_tien" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="chi_tiet_sua_chua">
+          <Key>
+            <PropertyRef Name="ma_ctsc" />
+          </Key>
+          <Property Name="ma_ctsc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_ps" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_lk" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ghi_chu" Type="nvarchar" MaxLength="500" />
+          <Property Name="gia_sua" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="so_luong" Type="int" Nullable="false" />
+          <Property Name="thanh_tien" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="don_hang">
+          <Key>
+            <PropertyRef Name="ma_dh" />
+          </Key>
+          <Property Name="ma_dh" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_nv" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_kh" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ngay_lap" Type="date" Nullable="false" />
+          <Property Name="tinh_trang" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="tong_tien" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="khach_hang">
+          <Key>
+            <PropertyRef Name="ma_kh" />
+          </Key>
+          <Property Name="ma_kh" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ho_ten" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="gioi_tinh" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ngay_sinh" Type="date" Nullable="false" />
+          <Property Name="dia_chi" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="dia_chi_email" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="so_dien_thoai" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="linh_kien">
+          <Key>
+            <PropertyRef Name="ma_lk" />
+          </Key>
+          <Property Name="ma_lk" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ten_lk" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mo_ta" Type="nvarchar" MaxLength="100" />
+          <Property Name="don_gia" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="so_luong" Type="int" Nullable="false" />
+          <Property Name="ma_ncc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="file_hinh_anh" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="nha_cung_cap">
+          <Key>
+            <PropertyRef Name="ma_ncc" />
+          </Key>
+          <Property Name="ma_ncc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ten_ncc" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="dia_chi" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="dia_chi_email" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="so_dien_thoai" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="nhan_vien">
+          <Key>
+            <PropertyRef Name="ma_nv" />
+          </Key>
+          <Property Name="ma_nv" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ho_ten" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mat_khau" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="chuc_vu" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="gioi_tinh" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ngay_sinh" Type="date" Nullable="false" />
+          <Property Name="dia_chi" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="dia_chi_email" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="so_dien_thoai" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="phieu_nhap">
+          <Key>
+            <PropertyRef Name="ma_pn" />
+          </Key>
+          <Property Name="ma_pn" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_nv" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_ncc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ngay_lap" Type="date" Nullable="false" />
+          <Property Name="tong_tien" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="phieu_sua">
+          <Key>
+            <PropertyRef Name="ma_ps" />
+          </Key>
+          <Property Name="ma_ps" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_nv" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_kh" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ma_xe" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ngay_lap" Type="date" Nullable="false" />
+          <Property Name="ngay_tra" Type="date" />
+          <Property Name="mo_ta_loi" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="tinh_trang" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="tong_tien" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="xe">
+          <Key>
+            <PropertyRef Name="ma_xe" />
+          </Key>
+          <Property Name="ma_xe" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ten_xe" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mo_ta" Type="nvarchar" MaxLength="100" />
+          <Property Name="hang_san_xuat" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="bien_so_xe" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="don_gia" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="so_luong" Type="int" Nullable="false" />
+          <Property Name="ma_ncc" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="file_hinh_anh" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK__chi_tiet___ma_dh__5BE2A6F2">
+          <End Role="don_hang" Type="Self.don_hang" Multiplicity="1" />
+          <End Role="chi_tiet_don_hang" Type="Self.chi_tiet_don_hang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="don_hang">
+              <PropertyRef Name="ma_dh" />
+            </Principal>
+            <Dependent Role="chi_tiet_don_hang">
+              <PropertyRef Name="ma_dh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_lk__6E01572D">
+          <End Role="linh_kien" Type="Self.linh_kien" Multiplicity="1" />
+          <End Role="chi_tiet_sua_chua" Type="Self.chi_tiet_sua_chua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="linh_kien">
+              <PropertyRef Name="ma_lk" />
+            </Principal>
+            <Dependent Role="chi_tiet_sua_chua">
+              <PropertyRef Name="ma_lk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_lk__7E37BEF6">
+          <End Role="linh_kien" Type="Self.linh_kien" Multiplicity="0..1" />
+          <End Role="chi_tiet_nhap_hang" Type="Self.chi_tiet_nhap_hang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="linh_kien">
+              <PropertyRef Name="ma_lk" />
+            </Principal>
+            <Dependent Role="chi_tiet_nhap_hang">
+              <PropertyRef Name="ma_lk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_pn__7C4F7684">
+          <End Role="phieu_nhap" Type="Self.phieu_nhap" Multiplicity="1" />
+          <End Role="chi_tiet_nhap_hang" Type="Self.chi_tiet_nhap_hang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phieu_nhap">
+              <PropertyRef Name="ma_pn" />
+            </Principal>
+            <Dependent Role="chi_tiet_nhap_hang">
+              <PropertyRef Name="ma_pn" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_ps__6D0D32F4">
+          <End Role="phieu_sua" Type="Self.phieu_sua" Multiplicity="1" />
+          <End Role="chi_tiet_sua_chua" Type="Self.chi_tiet_sua_chua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phieu_sua">
+              <PropertyRef Name="ma_ps" />
+            </Principal>
+            <Dependent Role="chi_tiet_sua_chua">
+              <PropertyRef Name="ma_ps" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_xe__5CD6CB2B">
+          <End Role="xe" Type="Self.xe" Multiplicity="1" />
+          <End Role="chi_tiet_don_hang" Type="Self.chi_tiet_don_hang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="xe">
+              <PropertyRef Name="ma_xe" />
+            </Principal>
+            <Dependent Role="chi_tiet_don_hang">
+              <PropertyRef Name="ma_xe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_xe__7D439ABD">
+          <End Role="xe" Type="Self.xe" Multiplicity="0..1" />
+          <End Role="chi_tiet_nhap_hang" Type="Self.chi_tiet_nhap_hang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="xe">
+              <PropertyRef Name="ma_xe" />
+            </Principal>
+            <Dependent Role="chi_tiet_nhap_hang">
+              <PropertyRef Name="ma_xe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__don_hang__ma_kh__5441852A">
+          <End Role="khach_hang" Type="Self.khach_hang" Multiplicity="1" />
+          <End Role="don_hang" Type="Self.don_hang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khach_hang">
+              <PropertyRef Name="ma_kh" />
+            </Principal>
+            <Dependent Role="don_hang">
+              <PropertyRef Name="ma_kh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__don_hang__ma_nv__534D60F1">
+          <End Role="nhan_vien" Type="Self.nhan_vien" Multiplicity="1" />
+          <End Role="don_hang" Type="Self.don_hang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhan_vien">
+              <PropertyRef Name="ma_nv" />
+            </Principal>
+            <Dependent Role="don_hang">
+              <PropertyRef Name="ma_nv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__linh_kien__ma_nc__45F365D3">
+          <End Role="nha_cung_cap" Type="Self.nha_cung_cap" Multiplicity="1" />
+          <End Role="linh_kien" Type="Self.linh_kien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nha_cung_cap">
+              <PropertyRef Name="ma_ncc" />
+            </Principal>
+            <Dependent Role="linh_kien">
+              <PropertyRef Name="ma_ncc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__phieu_nha__ma_nc__75A278F5">
+          <End Role="nha_cung_cap" Type="Self.nha_cung_cap" Multiplicity="1" />
+          <End Role="phieu_nhap" Type="Self.phieu_nhap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nha_cung_cap">
+              <PropertyRef Name="ma_ncc" />
+            </Principal>
+            <Dependent Role="phieu_nhap">
+              <PropertyRef Name="ma_ncc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__phieu_nha__ma_nv__74AE54BC">
+          <End Role="nhan_vien" Type="Self.nhan_vien" Multiplicity="1" />
+          <End Role="phieu_nhap" Type="Self.phieu_nhap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhan_vien">
+              <PropertyRef Name="ma_nv" />
+            </Principal>
+            <Dependent Role="phieu_nhap">
+              <PropertyRef Name="ma_nv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__phieu_sua__ma_kh__6477ECF3">
+          <End Role="khach_hang" Type="Self.khach_hang" Multiplicity="1" />
+          <End Role="phieu_sua" Type="Self.phieu_sua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khach_hang">
+              <PropertyRef Name="ma_kh" />
+            </Principal>
+            <Dependent Role="phieu_sua">
+              <PropertyRef Name="ma_kh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__phieu_sua__ma_nv__6383C8BA">
+          <End Role="nhan_vien" Type="Self.nhan_vien" Multiplicity="1" />
+          <End Role="phieu_sua" Type="Self.phieu_sua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhan_vien">
+              <PropertyRef Name="ma_nv" />
+            </Principal>
+            <Dependent Role="phieu_sua">
+              <PropertyRef Name="ma_nv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__phieu_sua__ma_xe__656C112C">
+          <End Role="xe" Type="Self.xe" Multiplicity="1" />
+          <End Role="phieu_sua" Type="Self.phieu_sua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="xe">
+              <PropertyRef Name="ma_xe" />
+            </Principal>
+            <Dependent Role="phieu_sua">
+              <PropertyRef Name="ma_xe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__xe__ma_ncc__3F466844">
+          <End Role="nha_cung_cap" Type="Self.nha_cung_cap" Multiplicity="1" />
+          <End Role="xe" Type="Self.xe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nha_cung_cap">
+              <PropertyRef Name="ma_ncc" />
+            </Principal>
+            <Dependent Role="xe">
+              <PropertyRef Name="ma_ncc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CuaHangXeModelStoreContainer">
+          <EntitySet Name="chi_tiet_don_hang" EntityType="Self.chi_tiet_don_hang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="chi_tiet_nhap_hang" EntityType="Self.chi_tiet_nhap_hang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="chi_tiet_sua_chua" EntityType="Self.chi_tiet_sua_chua" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="don_hang" EntityType="Self.don_hang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="khach_hang" EntityType="Self.khach_hang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="linh_kien" EntityType="Self.linh_kien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="nha_cung_cap" EntityType="Self.nha_cung_cap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="nhan_vien" EntityType="Self.nhan_vien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="phieu_nhap" EntityType="Self.phieu_nhap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="phieu_sua" EntityType="Self.phieu_sua" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="xe" EntityType="Self.xe" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__chi_tiet___ma_dh__5BE2A6F2" Association="Self.FK__chi_tiet___ma_dh__5BE2A6F2">
+            <End Role="don_hang" EntitySet="don_hang" />
+            <End Role="chi_tiet_don_hang" EntitySet="chi_tiet_don_hang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_lk__6E01572D" Association="Self.FK__chi_tiet___ma_lk__6E01572D">
+            <End Role="linh_kien" EntitySet="linh_kien" />
+            <End Role="chi_tiet_sua_chua" EntitySet="chi_tiet_sua_chua" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_lk__7E37BEF6" Association="Self.FK__chi_tiet___ma_lk__7E37BEF6">
+            <End Role="linh_kien" EntitySet="linh_kien" />
+            <End Role="chi_tiet_nhap_hang" EntitySet="chi_tiet_nhap_hang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_pn__7C4F7684" Association="Self.FK__chi_tiet___ma_pn__7C4F7684">
+            <End Role="phieu_nhap" EntitySet="phieu_nhap" />
+            <End Role="chi_tiet_nhap_hang" EntitySet="chi_tiet_nhap_hang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_ps__6D0D32F4" Association="Self.FK__chi_tiet___ma_ps__6D0D32F4">
+            <End Role="phieu_sua" EntitySet="phieu_sua" />
+            <End Role="chi_tiet_sua_chua" EntitySet="chi_tiet_sua_chua" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_xe__5CD6CB2B" Association="Self.FK__chi_tiet___ma_xe__5CD6CB2B">
+            <End Role="xe" EntitySet="xe" />
+            <End Role="chi_tiet_don_hang" EntitySet="chi_tiet_don_hang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_xe__7D439ABD" Association="Self.FK__chi_tiet___ma_xe__7D439ABD">
+            <End Role="xe" EntitySet="xe" />
+            <End Role="chi_tiet_nhap_hang" EntitySet="chi_tiet_nhap_hang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__don_hang__ma_kh__5441852A" Association="Self.FK__don_hang__ma_kh__5441852A">
+            <End Role="khach_hang" EntitySet="khach_hang" />
+            <End Role="don_hang" EntitySet="don_hang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__don_hang__ma_nv__534D60F1" Association="Self.FK__don_hang__ma_nv__534D60F1">
+            <End Role="nhan_vien" EntitySet="nhan_vien" />
+            <End Role="don_hang" EntitySet="don_hang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__linh_kien__ma_nc__45F365D3" Association="Self.FK__linh_kien__ma_nc__45F365D3">
+            <End Role="nha_cung_cap" EntitySet="nha_cung_cap" />
+            <End Role="linh_kien" EntitySet="linh_kien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__phieu_nha__ma_nc__75A278F5" Association="Self.FK__phieu_nha__ma_nc__75A278F5">
+            <End Role="nha_cung_cap" EntitySet="nha_cung_cap" />
+            <End Role="phieu_nhap" EntitySet="phieu_nhap" />
+          </AssociationSet>
+          <AssociationSet Name="FK__phieu_nha__ma_nv__74AE54BC" Association="Self.FK__phieu_nha__ma_nv__74AE54BC">
+            <End Role="nhan_vien" EntitySet="nhan_vien" />
+            <End Role="phieu_nhap" EntitySet="phieu_nhap" />
+          </AssociationSet>
+          <AssociationSet Name="FK__phieu_sua__ma_kh__6477ECF3" Association="Self.FK__phieu_sua__ma_kh__6477ECF3">
+            <End Role="khach_hang" EntitySet="khach_hang" />
+            <End Role="phieu_sua" EntitySet="phieu_sua" />
+          </AssociationSet>
+          <AssociationSet Name="FK__phieu_sua__ma_nv__6383C8BA" Association="Self.FK__phieu_sua__ma_nv__6383C8BA">
+            <End Role="nhan_vien" EntitySet="nhan_vien" />
+            <End Role="phieu_sua" EntitySet="phieu_sua" />
+          </AssociationSet>
+          <AssociationSet Name="FK__phieu_sua__ma_xe__656C112C" Association="Self.FK__phieu_sua__ma_xe__656C112C">
+            <End Role="xe" EntitySet="xe" />
+            <End Role="phieu_sua" EntitySet="phieu_sua" />
+          </AssociationSet>
+          <AssociationSet Name="FK__xe__ma_ncc__3F466844" Association="Self.FK__xe__ma_ncc__3F466844">
+            <End Role="nha_cung_cap" EntitySet="nha_cung_cap" />
+            <End Role="xe" EntitySet="xe" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CuaHangXeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ChiTietDonHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaDonHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="GiaBan" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="don_hang" Relationship="Self.FK__chi_tiet___ma_dh__5BE2A6F2" FromRole="chi_tiet_don_hang" ToRole="don_hang" />
+          <NavigationProperty Name="xe" Relationship="Self.FK__chi_tiet___ma_xe__5CD6CB2B" FromRole="chi_tiet_don_hang" ToRole="xe" />
+        </EntityType>
+        <EntityType Name="ChiTietNhapHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MaLinhKien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="GiaNhap" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="linh_kien" Relationship="Self.FK__chi_tiet___ma_lk__7E37BEF6" FromRole="chi_tiet_nhap_hang" ToRole="linh_kien" />
+          <NavigationProperty Name="phieu_nhap" Relationship="Self.FK__chi_tiet___ma_pn__7C4F7684" FromRole="chi_tiet_nhap_hang" ToRole="phieu_nhap" />
+          <NavigationProperty Name="xe" Relationship="Self.FK__chi_tiet___ma_xe__7D439ABD" FromRole="chi_tiet_nhap_hang" ToRole="xe" />
+        </EntityType>
+        <EntityType Name="ChiTietSuaChua">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaPhieuNhap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaLinhKien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="GhiChu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="GiaSua" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="linh_kien" Relationship="Self.FK__chi_tiet___ma_lk__6E01572D" FromRole="chi_tiet_sua_chua" ToRole="linh_kien" />
+          <NavigationProperty Name="phieu_sua" Relationship="Self.FK__chi_tiet___ma_ps__6D0D32F4" FromRole="chi_tiet_sua_chua" ToRole="phieu_sua" />
+        </EntityType>
+        <EntityType Name="DonHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TinhTrang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="chi_tiet_don_hang" Relationship="Self.FK__chi_tiet___ma_dh__5BE2A6F2" FromRole="don_hang" ToRole="chi_tiet_don_hang" />
+          <NavigationProperty Name="khach_hang" Relationship="Self.FK__don_hang__ma_kh__5441852A" FromRole="don_hang" ToRole="khach_hang" />
+          <NavigationProperty Name="nhan_vien" Relationship="Self.FK__don_hang__ma_nv__534D60F1" FromRole="don_hang" ToRole="nhan_vien" />
+        </EntityType>
+        <EntityType Name="KhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GioiTinh" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DiaChi" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChiEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="don_hang" Relationship="Self.FK__don_hang__ma_kh__5441852A" FromRole="khach_hang" ToRole="don_hang" />
+          <NavigationProperty Name="phieu_sua" Relationship="Self.FK__phieu_sua__ma_kh__6477ECF3" FromRole="khach_hang" ToRole="phieu_sua" />
+        </EntityType>
+        <EntityType Name="LinhKien">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="MaNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="FileHinhAnh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="chi_tiet_nhap_hang" Relationship="Self.FK__chi_tiet___ma_lk__7E37BEF6" FromRole="linh_kien" ToRole="chi_tiet_nhap_hang" />
+          <NavigationProperty Name="chi_tiet_sua_chua" Relationship="Self.FK__chi_tiet___ma_lk__6E01572D" FromRole="linh_kien" ToRole="chi_tiet_sua_chua" />
+          <NavigationProperty Name="nha_cung_cap" Relationship="Self.FK__linh_kien__ma_nc__45F365D3" FromRole="linh_kien" ToRole="nha_cung_cap" />
+        </EntityType>
+        <EntityType Name="NhaCungCap">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChiEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="linh_kien" Relationship="Self.FK__linh_kien__ma_nc__45F365D3" FromRole="nha_cung_cap" ToRole="linh_kien" />
+          <NavigationProperty Name="phieu_nhap" Relationship="Self.FK__phieu_nha__ma_nc__75A278F5" FromRole="nha_cung_cap" ToRole="phieu_nhap" />
+          <NavigationProperty Name="xes" Relationship="Self.FK__xe__ma_ncc__3F466844" FromRole="nha_cung_cap" ToRole="xe" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ChucVu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GioiTinh" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DiaChi" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChiEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="don_hang" Relationship="Self.FK__don_hang__ma_nv__534D60F1" FromRole="nhan_vien" ToRole="don_hang" />
+          <NavigationProperty Name="phieu_nhap" Relationship="Self.FK__phieu_nha__ma_nv__74AE54BC" FromRole="nhan_vien" ToRole="phieu_nhap" />
+          <NavigationProperty Name="phieu_sua" Relationship="Self.FK__phieu_sua__ma_nv__6383C8BA" FromRole="nhan_vien" ToRole="phieu_sua" />
+        </EntityType>
+        <EntityType Name="PhieuNhap">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="chi_tiet_nhap_hang" Relationship="Self.FK__chi_tiet___ma_pn__7C4F7684" FromRole="phieu_nhap" ToRole="chi_tiet_nhap_hang" />
+          <NavigationProperty Name="nha_cung_cap" Relationship="Self.FK__phieu_nha__ma_nc__75A278F5" FromRole="phieu_nhap" ToRole="nha_cung_cap" />
+          <NavigationProperty Name="nhan_vien" Relationship="Self.FK__phieu_nha__ma_nv__74AE54BC" FromRole="phieu_nhap" ToRole="nhan_vien" />
+        </EntityType>
+        <EntityType Name="PhieuSua">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="NgayTra" Type="DateTime" Precision="0" />
+          <Property Name="MoTaLoi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TinhTrang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="chi_tiet_sua_chua" Relationship="Self.FK__chi_tiet___ma_ps__6D0D32F4" FromRole="phieu_sua" ToRole="chi_tiet_sua_chua" />
+          <NavigationProperty Name="khach_hang" Relationship="Self.FK__phieu_sua__ma_kh__6477ECF3" FromRole="phieu_sua" ToRole="khach_hang" />
+          <NavigationProperty Name="nhan_vien" Relationship="Self.FK__phieu_sua__ma_nv__6383C8BA" FromRole="phieu_sua" ToRole="nhan_vien" />
+          <NavigationProperty Name="xe" Relationship="Self.FK__phieu_sua__ma_xe__656C112C" FromRole="phieu_sua" ToRole="xe" />
+        </EntityType>
+        <EntityType Name="Xe">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HangSanXuat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BienSoXe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="MaNhaCungCap" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="FileHinhAnh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="chi_tiet_don_hang" Relationship="Self.FK__chi_tiet___ma_xe__5CD6CB2B" FromRole="xe" ToRole="chi_tiet_don_hang" />
+          <NavigationProperty Name="chi_tiet_nhap_hang" Relationship="Self.FK__chi_tiet___ma_xe__7D439ABD" FromRole="xe" ToRole="chi_tiet_nhap_hang" />
+          <NavigationProperty Name="nha_cung_cap" Relationship="Self.FK__xe__ma_ncc__3F466844" FromRole="xe" ToRole="nha_cung_cap" />
+          <NavigationProperty Name="phieu_sua" Relationship="Self.FK__phieu_sua__ma_xe__656C112C" FromRole="xe" ToRole="phieu_sua" />
+        </EntityType>
+        <Association Name="FK__chi_tiet___ma_dh__5BE2A6F2">
+          <End Role="don_hang" Type="CuaHangXeModel.DonHang" Multiplicity="1" />
+          <End Role="chi_tiet_don_hang" Type="CuaHangXeModel.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="don_hang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="chi_tiet_don_hang">
+              <PropertyRef Name="MaDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_xe__5CD6CB2B">
+          <End Role="xe" Type="CuaHangXeModel.Xe" Multiplicity="1" />
+          <End Role="chi_tiet_don_hang" Type="CuaHangXeModel.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="xe">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="chi_tiet_don_hang">
+              <PropertyRef Name="MaXe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_lk__7E37BEF6">
+          <End Role="linh_kien" Type="CuaHangXeModel.LinhKien" Multiplicity="0..1" />
+          <End Role="chi_tiet_nhap_hang" Type="CuaHangXeModel.ChiTietNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="linh_kien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="chi_tiet_nhap_hang">
+              <PropertyRef Name="MaLinhKien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_pn__7C4F7684">
+          <End Role="phieu_nhap" Type="CuaHangXeModel.PhieuNhap" Multiplicity="1" />
+          <End Role="chi_tiet_nhap_hang" Type="CuaHangXeModel.ChiTietNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phieu_nhap">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="chi_tiet_nhap_hang">
+              <PropertyRef Name="MaPhieuNhap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_xe__7D439ABD">
+          <End Role="xe" Type="CuaHangXeModel.Xe" Multiplicity="0..1" />
+          <End Role="chi_tiet_nhap_hang" Type="CuaHangXeModel.ChiTietNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="xe">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="chi_tiet_nhap_hang">
+              <PropertyRef Name="MaXe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_lk__6E01572D">
+          <End Role="linh_kien" Type="CuaHangXeModel.LinhKien" Multiplicity="1" />
+          <End Role="chi_tiet_sua_chua" Type="CuaHangXeModel.ChiTietSuaChua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="linh_kien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="chi_tiet_sua_chua">
+              <PropertyRef Name="MaLinhKien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__chi_tiet___ma_ps__6D0D32F4">
+          <End Role="phieu_sua" Type="CuaHangXeModel.PhieuSua" Multiplicity="1" />
+          <End Role="chi_tiet_sua_chua" Type="CuaHangXeModel.ChiTietSuaChua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phieu_sua">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="chi_tiet_sua_chua">
+              <PropertyRef Name="MaPhieuNhap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__don_hang__ma_kh__5441852A">
+          <End Role="khach_hang" Type="CuaHangXeModel.KhachHang" Multiplicity="1" />
+          <End Role="don_hang" Type="CuaHangXeModel.DonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khach_hang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="don_hang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__don_hang__ma_nv__534D60F1">
+          <End Role="nhan_vien" Type="CuaHangXeModel.NhanVien" Multiplicity="1" />
+          <End Role="don_hang" Type="CuaHangXeModel.DonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhan_vien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="don_hang">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__phieu_sua__ma_kh__6477ECF3">
+          <End Role="khach_hang" Type="CuaHangXeModel.KhachHang" Multiplicity="1" />
+          <End Role="phieu_sua" Type="CuaHangXeModel.PhieuSua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khach_hang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="phieu_sua">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__linh_kien__ma_nc__45F365D3">
+          <End Role="nha_cung_cap" Type="CuaHangXeModel.NhaCungCap" Multiplicity="1" />
+          <End Role="linh_kien" Type="CuaHangXeModel.LinhKien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nha_cung_cap">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="linh_kien">
+              <PropertyRef Name="MaNhaCungCap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__phieu_nha__ma_nc__75A278F5">
+          <End Role="nha_cung_cap" Type="CuaHangXeModel.NhaCungCap" Multiplicity="1" />
+          <End Role="phieu_nhap" Type="CuaHangXeModel.PhieuNhap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nha_cung_cap">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="phieu_nhap">
+              <PropertyRef Name="MaNhaCungCap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__xe__ma_ncc__3F466844">
+          <End Role="nha_cung_cap" Type="CuaHangXeModel.NhaCungCap" Multiplicity="1" />
+          <End Role="xe" Type="CuaHangXeModel.Xe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nha_cung_cap">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="xe">
+              <PropertyRef Name="MaNhaCungCap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__phieu_nha__ma_nv__74AE54BC">
+          <End Role="nhan_vien" Type="CuaHangXeModel.NhanVien" Multiplicity="1" />
+          <End Role="phieu_nhap" Type="CuaHangXeModel.PhieuNhap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhan_vien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="phieu_nhap">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__phieu_sua__ma_nv__6383C8BA">
+          <End Role="nhan_vien" Type="CuaHangXeModel.NhanVien" Multiplicity="1" />
+          <End Role="phieu_sua" Type="CuaHangXeModel.PhieuSua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhan_vien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="phieu_sua">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__phieu_sua__ma_xe__656C112C">
+          <End Role="xe" Type="CuaHangXeModel.Xe" Multiplicity="1" />
+          <End Role="phieu_sua" Type="CuaHangXeModel.PhieuSua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="xe">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="phieu_sua">
+              <PropertyRef Name="MaXe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CuaHangXeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DsChiTietDonHang" EntityType="CuaHangXeModel.ChiTietDonHang" />
+          <EntitySet Name="DsChiTietNhapHang" EntityType="CuaHangXeModel.ChiTietNhapHang" />
+          <EntitySet Name="DsChiTietSuaChua" EntityType="CuaHangXeModel.ChiTietSuaChua" />
+          <EntitySet Name="DsDonHang" EntityType="CuaHangXeModel.DonHang" />
+          <EntitySet Name="DsKhachHang" EntityType="CuaHangXeModel.KhachHang" />
+          <EntitySet Name="DsLinhKien" EntityType="CuaHangXeModel.LinhKien" />
+          <EntitySet Name="DsNhaCungCap" EntityType="CuaHangXeModel.NhaCungCap" />
+          <EntitySet Name="DsNhanVien" EntityType="CuaHangXeModel.NhanVien" />
+          <EntitySet Name="PhieuNhaps" EntityType="CuaHangXeModel.PhieuNhap" />
+          <EntitySet Name="DsPhieuSua" EntityType="CuaHangXeModel.PhieuSua" />
+          <EntitySet Name="DsXe" EntityType="CuaHangXeModel.Xe" />
+          <AssociationSet Name="FK__chi_tiet___ma_dh__5BE2A6F2" Association="Self.FK__chi_tiet___ma_dh__5BE2A6F2">
+            <End Role="don_hang" EntitySet="DsDonHang" />
+            <End Role="chi_tiet_don_hang" EntitySet="DsChiTietDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_xe__5CD6CB2B" Association="Self.FK__chi_tiet___ma_xe__5CD6CB2B">
+            <End Role="xe" EntitySet="DsXe" />
+            <End Role="chi_tiet_don_hang" EntitySet="DsChiTietDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_lk__7E37BEF6" Association="Self.FK__chi_tiet___ma_lk__7E37BEF6">
+            <End Role="linh_kien" EntitySet="DsLinhKien" />
+            <End Role="chi_tiet_nhap_hang" EntitySet="DsChiTietNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_pn__7C4F7684" Association="Self.FK__chi_tiet___ma_pn__7C4F7684">
+            <End Role="phieu_nhap" EntitySet="PhieuNhaps" />
+            <End Role="chi_tiet_nhap_hang" EntitySet="DsChiTietNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_xe__7D439ABD" Association="Self.FK__chi_tiet___ma_xe__7D439ABD">
+            <End Role="xe" EntitySet="DsXe" />
+            <End Role="chi_tiet_nhap_hang" EntitySet="DsChiTietNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_lk__6E01572D" Association="Self.FK__chi_tiet___ma_lk__6E01572D">
+            <End Role="linh_kien" EntitySet="DsLinhKien" />
+            <End Role="chi_tiet_sua_chua" EntitySet="DsChiTietSuaChua" />
+          </AssociationSet>
+          <AssociationSet Name="FK__chi_tiet___ma_ps__6D0D32F4" Association="Self.FK__chi_tiet___ma_ps__6D0D32F4">
+            <End Role="phieu_sua" EntitySet="DsPhieuSua" />
+            <End Role="chi_tiet_sua_chua" EntitySet="DsChiTietSuaChua" />
+          </AssociationSet>
+          <AssociationSet Name="FK__don_hang__ma_kh__5441852A" Association="Self.FK__don_hang__ma_kh__5441852A">
+            <End Role="khach_hang" EntitySet="DsKhachHang" />
+            <End Role="don_hang" EntitySet="DsDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__don_hang__ma_nv__534D60F1" Association="Self.FK__don_hang__ma_nv__534D60F1">
+            <End Role="nhan_vien" EntitySet="DsNhanVien" />
+            <End Role="don_hang" EntitySet="DsDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__phieu_sua__ma_kh__6477ECF3" Association="Self.FK__phieu_sua__ma_kh__6477ECF3">
+            <End Role="khach_hang" EntitySet="DsKhachHang" />
+            <End Role="phieu_sua" EntitySet="DsPhieuSua" />
+          </AssociationSet>
+          <AssociationSet Name="FK__linh_kien__ma_nc__45F365D3" Association="Self.FK__linh_kien__ma_nc__45F365D3">
+            <End Role="nha_cung_cap" EntitySet="DsNhaCungCap" />
+            <End Role="linh_kien" EntitySet="DsLinhKien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__phieu_nha__ma_nc__75A278F5" Association="Self.FK__phieu_nha__ma_nc__75A278F5">
+            <End Role="nha_cung_cap" EntitySet="DsNhaCungCap" />
+            <End Role="phieu_nhap" EntitySet="PhieuNhaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK__xe__ma_ncc__3F466844" Association="Self.FK__xe__ma_ncc__3F466844">
+            <End Role="nha_cung_cap" EntitySet="DsNhaCungCap" />
+            <End Role="xe" EntitySet="DsXe" />
+          </AssociationSet>
+          <AssociationSet Name="FK__phieu_nha__ma_nv__74AE54BC" Association="Self.FK__phieu_nha__ma_nv__74AE54BC">
+            <End Role="nhan_vien" EntitySet="DsNhanVien" />
+            <End Role="phieu_nhap" EntitySet="PhieuNhaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK__phieu_sua__ma_nv__6383C8BA" Association="Self.FK__phieu_sua__ma_nv__6383C8BA">
+            <End Role="nhan_vien" EntitySet="DsNhanVien" />
+            <End Role="phieu_sua" EntitySet="DsPhieuSua" />
+          </AssociationSet>
+          <AssociationSet Name="FK__phieu_sua__ma_xe__656C112C" Association="Self.FK__phieu_sua__ma_xe__656C112C">
+            <End Role="xe" EntitySet="DsXe" />
+            <End Role="phieu_sua" EntitySet="DsPhieuSua" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CuaHangXeModelStoreContainer" CdmEntityContainer="CuaHangXeEntities">
+          <EntitySetMapping Name="DsChiTietDonHang">
+            <EntityTypeMapping TypeName="CuaHangXeModel.ChiTietDonHang">
+              <MappingFragment StoreEntitySet="chi_tiet_don_hang">
+                <ScalarProperty Name="Ma" ColumnName="ma_ctdh" />
+                <ScalarProperty Name="MaDonHang" ColumnName="ma_dh" />
+                <ScalarProperty Name="MaXe" ColumnName="ma_xe" />
+                <ScalarProperty Name="GiaBan" ColumnName="gia_ban" />
+                <ScalarProperty Name="SoLuong" ColumnName="so_luong" />
+                <ScalarProperty Name="ThanhTien" ColumnName="thanh_tien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DsChiTietNhapHang">
+            <EntityTypeMapping TypeName="CuaHangXeModel.ChiTietNhapHang">
+              <MappingFragment StoreEntitySet="chi_tiet_nhap_hang">
+                <ScalarProperty Name="Ma" ColumnName="ma_ctnh" />
+                <ScalarProperty Name="MaPhieuNhap" ColumnName="ma_pn" />
+                <ScalarProperty Name="MaXe" ColumnName="ma_xe" />
+                <ScalarProperty Name="MaLinhKien" ColumnName="ma_lk" />
+                <ScalarProperty Name="GiaNhap" ColumnName="gia_nhap" />
+                <ScalarProperty Name="SoLuong" ColumnName="so_luong" />
+                <ScalarProperty Name="ThanhTien" ColumnName="thanh_tien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DsChiTietSuaChua">
+            <EntityTypeMapping TypeName="CuaHangXeModel.ChiTietSuaChua">
+              <MappingFragment StoreEntitySet="chi_tiet_sua_chua">
+                <ScalarProperty Name="Ma" ColumnName="ma_ctsc" />
+                <ScalarProperty Name="MaPhieuNhap" ColumnName="ma_ps" />
+                <ScalarProperty Name="MaLinhKien" ColumnName="ma_lk" />
+                <ScalarProperty Name="GhiChu" ColumnName="ghi_chu" />
+                <ScalarProperty Name="GiaSua" ColumnName="gia_sua" />
+                <ScalarProperty Name="SoLuong" ColumnName="so_luong" />
+                <ScalarProperty Name="ThanhTien" ColumnName="thanh_tien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DsDonHang">
+            <EntityTypeMapping TypeName="CuaHangXeModel.DonHang">
+              <MappingFragment StoreEntitySet="don_hang">
+                <ScalarProperty Name="Ma" ColumnName="ma_dh" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="ma_nv" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="ma_kh" />
+                <ScalarProperty Name="NgayLap" ColumnName="ngay_lap" />
+                <ScalarProperty Name="TinhTrang" ColumnName="tinh_trang" />
+                <ScalarProperty Name="TongTien" ColumnName="tong_tien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DsKhachHang">
+            <EntityTypeMapping TypeName="CuaHangXeModel.KhachHang">
+              <MappingFragment StoreEntitySet="khach_hang">
+                <ScalarProperty Name="Ma" ColumnName="ma_kh" />
+                <ScalarProperty Name="HoTen" ColumnName="ho_ten" />
+                <ScalarProperty Name="GioiTinh" ColumnName="gioi_tinh" />
+                <ScalarProperty Name="NgaySinh" ColumnName="ngay_sinh" />
+                <ScalarProperty Name="DiaChi" ColumnName="dia_chi" />
+                <ScalarProperty Name="DiaChiEmail" ColumnName="dia_chi_email" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="so_dien_thoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DsLinhKien">
+            <EntityTypeMapping TypeName="CuaHangXeModel.LinhKien">
+              <MappingFragment StoreEntitySet="linh_kien">
+                <ScalarProperty Name="Ma" ColumnName="ma_lk" />
+                <ScalarProperty Name="Ten" ColumnName="ten_lk" />
+                <ScalarProperty Name="MoTa" ColumnName="mo_ta" />
+                <ScalarProperty Name="DonGia" ColumnName="don_gia" />
+                <ScalarProperty Name="SoLuong" ColumnName="so_luong" />
+                <ScalarProperty Name="MaNhaCungCap" ColumnName="ma_ncc" />
+                <ScalarProperty Name="FileHinhAnh" ColumnName="file_hinh_anh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DsNhaCungCap">
+            <EntityTypeMapping TypeName="CuaHangXeModel.NhaCungCap">
+              <MappingFragment StoreEntitySet="nha_cung_cap">
+                <ScalarProperty Name="Ma" ColumnName="ma_ncc" />
+                <ScalarProperty Name="Ten" ColumnName="ten_ncc" />
+                <ScalarProperty Name="DiaChi" ColumnName="dia_chi" />
+                <ScalarProperty Name="DiaChiEmail" ColumnName="dia_chi_email" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="so_dien_thoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DsNhanVien">
+            <EntityTypeMapping TypeName="CuaHangXeModel.NhanVien">
+              <MappingFragment StoreEntitySet="nhan_vien">
+                <ScalarProperty Name="Ma" ColumnName="ma_nv" />
+                <ScalarProperty Name="HoTen" ColumnName="ho_ten" />
+                <ScalarProperty Name="MatKhau" ColumnName="mat_khau" />
+                <ScalarProperty Name="ChucVu" ColumnName="chuc_vu" />
+                <ScalarProperty Name="GioiTinh" ColumnName="gioi_tinh" />
+                <ScalarProperty Name="NgaySinh" ColumnName="ngay_sinh" />
+                <ScalarProperty Name="DiaChi" ColumnName="dia_chi" />
+                <ScalarProperty Name="DiaChiEmail" ColumnName="dia_chi_email" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="so_dien_thoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhieuNhaps">
+            <EntityTypeMapping TypeName="CuaHangXeModel.PhieuNhap">
+              <MappingFragment StoreEntitySet="phieu_nhap">
+                <ScalarProperty Name="Ma" ColumnName="ma_pn" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="ma_nv" />
+                <ScalarProperty Name="MaNhaCungCap" ColumnName="ma_ncc" />
+                <ScalarProperty Name="NgayLap" ColumnName="ngay_lap" />
+                <ScalarProperty Name="TongTien" ColumnName="tong_tien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DsPhieuSua">
+            <EntityTypeMapping TypeName="CuaHangXeModel.PhieuSua">
+              <MappingFragment StoreEntitySet="phieu_sua">
+                <ScalarProperty Name="Ma" ColumnName="ma_ps" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="ma_nv" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="ma_kh" />
+                <ScalarProperty Name="MaXe" ColumnName="ma_xe" />
+                <ScalarProperty Name="NgayLap" ColumnName="ngay_lap" />
+                <ScalarProperty Name="NgayTra" ColumnName="ngay_tra" />
+                <ScalarProperty Name="MoTaLoi" ColumnName="mo_ta_loi" />
+                <ScalarProperty Name="TinhTrang" ColumnName="tinh_trang" />
+                <ScalarProperty Name="TongTien" ColumnName="tong_tien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DsXe">
+            <EntityTypeMapping TypeName="CuaHangXeModel.Xe">
+              <MappingFragment StoreEntitySet="xe">
+                <ScalarProperty Name="Ma" ColumnName="ma_xe" />
+                <ScalarProperty Name="Ten" ColumnName="ten_xe" />
+                <ScalarProperty Name="MoTa" ColumnName="mo_ta" />
+                <ScalarProperty Name="HangSanXuat" ColumnName="hang_san_xuat" />
+                <ScalarProperty Name="BienSoXe" ColumnName="bien_so_xe" />
+                <ScalarProperty Name="DonGia" ColumnName="don_gia" />
+                <ScalarProperty Name="SoLuong" ColumnName="so_luong" />
+                <ScalarProperty Name="MaNhaCungCap" ColumnName="ma_ncc" />
+                <ScalarProperty Name="FileHinhAnh" ColumnName="file_hinh_anh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
