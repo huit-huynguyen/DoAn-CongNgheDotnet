@@ -1,14 +1,25 @@
+# ===============================================
+# Line endings
+# ===============================================
+
 * text=auto eol=lf
 
-# This must be set as `CRLF`.
+# Force LF for Unix shell scripts
+*.sh text eol=lf
+
+# Force CRLF for Windows shell scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Force CRLF for solution and project files
 *.sln text eol=crlf
-*.csproj text eol=crlf
-*.resx text eol=crlf
 
-#
+# ===============================================
 # Binary files
-#
+# ===============================================
 
+# Common image formats
 *.png binary
 *.jpg binary
+*.ico binary
 *.gif binary

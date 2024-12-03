@@ -1,14 +1,99 @@
+# ===============================================
+# Build results
+# ===============================================
+
+[Aa]rtifacts/
 [Bb]in/
 [Oo]bj/
+[Oo]ut/
+
+[Ll]og/
+[Ll]ogs/
 
 [Dd]ebug/
+[Dd]ebugPublic/
 [Rr]elease/
+[Rr]eleases/
 
-# NuGet packages.
-packages/*
-!packages/repositories.config
+[Xx]86/
+[Xx]64/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Ww][Ii][Nn]32/
 
-# User-specific files.
-.vs
+# ===============================================
+# NuGet packages
+# ===============================================
+
+*.nupkg
+*.snupkg
+
+*.nuget.props
+*.nuget.targets
+
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+!**/[Pp]ackages/repositories.config
+
+# ===============================================
+# Development environment specific files
+# ===============================================
+# These files are created by specific development environments or tools
+# (e.g. OSes, IDEs, editors, etc.) and should NOT be included in `.gitignore`.
+# Because the `.gitignore` file is meant to ignore project-specific files.
+#
+# Best practice is to use the local `.git/info/exclude` file,
+# or set up a global `.gitignore` file:
+# ```shell
+# $ git config --global core.excludesFile '~/.gitignore'
+# ```
+#
+# However, since this is not a professional project,
+# and most contributors may not be familiar with these practices,
+# we include some common files that should be ignored in this file.
+
+#
+# Temporary and log files
+#
+
+*~
+.#*
+
+*.log
+*.tmp
+*.swp
+*.swo
+
+#
+# User-specific files
+#
+
+*.rsuser
 *.suo
 *.user
+*.userosscache
+*.sln.docstates
+
+#
+# IDE and editor files
+#
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio
+.vs/
+
+# JetBrains Rider
+.idea/
+
+#
+# Operating system files
+#
+
+# Windows
+Thumbs.db
+
+# macOS
+.DS_Store
