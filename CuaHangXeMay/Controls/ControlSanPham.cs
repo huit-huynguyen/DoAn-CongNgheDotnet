@@ -5,16 +5,16 @@ using CuaHangXeMay.Models;
 
 namespace CuaHangXeMay.Controls
 {
-    public partial class SanPham : UserControl
+    public partial class ControlSanPham : UserControl
     {
         public Xe Xe { get; set; }
 
-        public SanPham()
+        public ControlSanPham()
         {
             InitializeComponent();
         }
 
-        public SanPham(Xe xe)
+        public ControlSanPham(Xe xe)
         {
             InitializeComponent();
             Xe = xe;

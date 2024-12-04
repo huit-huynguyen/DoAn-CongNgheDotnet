@@ -1,6 +1,6 @@
 namespace CuaHangXeMay.Controls
 {
-    partial class SanPham
+    partial class ControlSanPham
     {
         /// <summary> 
         /// Required designer variable.

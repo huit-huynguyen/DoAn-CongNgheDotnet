@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 
 namespace CuaHangXeMay.Models
 {
@@ -16,7 +17,16 @@ namespace CuaHangXeMay.Models
         public int SoLuong
         {
             get { return _soLuong; }
-            set { SetField(ref _soLuong, value, "SoLuong"); }
+            set
+            {
+                SetField(ref _soLuong, value, "SoLuong");
+                OnPropertyChanged("ThanhTien");
+            }
+        }
+
+        public decimal ThanhTien
+        {
+            get { return Xe.DonGia * SoLuong; }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -39,6 +49,14 @@ namespace CuaHangXeMay.Models
             field = value;
             OnPropertyChanged(propertyName);
             return true;
+        }
+    }
+
+    public static class GioHangExtensions
+    {
+        public static decimal TongTien(this IEnumerable<SanPhamGioHang> gioHang)
+        {
+            return gioHang.Aggregate(0M, (acc, sp) => acc + sp.Xe.DonGia * sp.SoLuong);
         }
     }
 }

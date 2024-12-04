@@ -60,12 +60,12 @@ namespace CuaHangXeMay.Forms
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.Location = new System.Drawing.Point(40, 235);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(320, 35);
-            this.btnDangNhap.TabIndex = 0;
+            this.btnDangNhap.TabIndex = 5;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -76,7 +76,7 @@ namespace CuaHangXeMay.Forms
             this.txtMatKhau.Location = new System.Drawing.Point(40, 185);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(320, 25);
-            this.txtMatKhau.TabIndex = 1;
+            this.txtMatKhau.TabIndex = 4;
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // txtTaiKhoan
@@ -90,32 +90,33 @@ namespace CuaHangXeMay.Forms
             // lblMatKhau
             // 
             this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblMatKhau.Location = new System.Drawing.Point(40, 160);
+            this.lblMatKhau.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblMatKhau.Location = new System.Drawing.Point(39, 163);
             this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(71, 19);
+            this.lblMatKhau.Size = new System.Drawing.Size(75, 19);
             this.lblMatKhau.TabIndex = 3;
             this.lblMatKhau.Text = "Mật khẩu:";
             // 
             // lblTaiKhoan
             // 
             this.lblTaiKhoan.AutoSize = true;
-            this.lblTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTaiKhoan.Location = new System.Drawing.Point(40, 90);
+            this.lblTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTaiKhoan.Location = new System.Drawing.Point(39, 93);
             this.lblTaiKhoan.Name = "lblTaiKhoan";
-            this.lblTaiKhoan.Size = new System.Drawing.Size(69, 19);
-            this.lblTaiKhoan.TabIndex = 4;
+            this.lblTaiKhoan.Size = new System.Drawing.Size(77, 19);
+            this.lblTaiKhoan.TabIndex = 1;
             this.lblTaiKhoan.Text = "Tài khoản:";
             // 
             // lblTieuDe
             // 
-            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTieuDe.Location = new System.Drawing.Point(129, 20);
+            this.lblTieuDe.Location = new System.Drawing.Point(20, 20);
             this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(146, 30);
-            this.lblTieuDe.TabIndex = 5;
+            this.lblTieuDe.Size = new System.Drawing.Size(360, 43);
+            this.lblTieuDe.TabIndex = 0;
             this.lblTieuDe.Text = "ĐĂNG NHẬP";
+            this.lblTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThongBaoLoi
             // 
