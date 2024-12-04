@@ -18,7 +18,7 @@ namespace CuaHangXeMay
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(container.Resolve<FormChinh>());
+            Application.Run(container.Resolve<FormDangNhap>());
         }
 
         static void RegisterServices(IUnityContainer container)
@@ -26,7 +26,6 @@ namespace CuaHangXeMay
             container.RegisterType<DbContext, CuaHangXeEntities>(new TransientLifetimeManager());
 
             container.RegisterType<FormDangNhap>();
-            container.RegisterType<FormChinh>();
         }
     }
 }

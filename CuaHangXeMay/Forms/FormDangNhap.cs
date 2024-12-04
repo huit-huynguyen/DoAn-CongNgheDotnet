@@ -14,9 +14,8 @@ namespace CuaHangXeMay.Forms
             InitializeComponent();
         }
 
-        public FormDangNhap(CuaHangXeEntities dbContext)
+        public FormDangNhap(CuaHangXeEntities dbContext) : this()
         {
-            InitializeComponent();
             _dbContext = dbContext;
         }
 
@@ -51,6 +50,15 @@ namespace CuaHangXeMay.Forms
 
             lblThongBaoLoi.Text = string.Empty;
             lblThongBaoLoi.Visible = false;
+
+            var frmChinh = new FormBanHang(_dbContext, nhanVien);
+            frmChinh.Show();
+            frmChinh.FormClosed += (formSender, formEvent) =>
+            {
+                this.Show();
+            };
+
+            Hide();
         }
     }
 }

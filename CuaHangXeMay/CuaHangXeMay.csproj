@@ -68,23 +68,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\SanPham.cs">
+    <Compile Include="Controls\ControlSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\SanPham.Designer.cs">
-      <DependentUpon>SanPham.cs</DependentUpon>
+    <Compile Include="Controls\ControlSanPham.Designer.cs">
+      <DependentUpon>ControlSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormChinh.cs">
+    <Compile Include="Forms\FormBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormChinh.Designer.cs">
-      <DependentUpon>FormChinh.cs</DependentUpon>
+    <Compile Include="Forms\FormBanHang.Designer.cs">
+      <DependentUpon>FormBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormThanhToan.Designer.cs">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ChiTietDonHang.cs">
       <DependentUpon>CuaHangXe.tt</DependentUpon>
@@ -113,7 +119,6 @@
     <Compile Include="Models\DonHang.cs">
       <DependentUpon>CuaHangXe.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\KhachHang.cs">
       <DependentUpon>CuaHangXe.tt</DependentUpon>
     </Compile>
@@ -138,14 +143,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controls\SanPham.resx">
-      <DependentUpon>SanPham.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ControlSanPham.resx">
+      <DependentUpon>ControlSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormChinh.resx">
-      <DependentUpon>FormChinh.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormBanHang.resx">
+      <DependentUpon>FormBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormThanhToan.resx">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
