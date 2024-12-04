@@ -51,6 +51,13 @@ namespace CuaHangXeMay.Forms
 
             lblThongBaoLoi.Text = string.Empty;
             lblThongBaoLoi.Visible = false;
+
+            var frmChinh = new FormChinh(_dbContext);
+            frmChinh.Show();
+            frmChinh.FormClosed += (formSender, formEvent) =>
+            {
+                this.Show();
+            };
         }
     }
 }

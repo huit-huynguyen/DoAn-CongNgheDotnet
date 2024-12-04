@@ -75,7 +75,7 @@ namespace CuaHangXeMay.Forms
             this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtMatKhau.Location = new System.Drawing.Point(40, 185);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(320, 30);
+            this.txtMatKhau.Size = new System.Drawing.Size(320, 25);
             this.txtMatKhau.TabIndex = 1;
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
@@ -84,7 +84,7 @@ namespace CuaHangXeMay.Forms
             this.txtTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtTaiKhoan.Location = new System.Drawing.Point(40, 115);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(320, 30);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(320, 25);
             this.txtTaiKhoan.TabIndex = 2;
             // 
             // lblMatKhau
@@ -93,7 +93,7 @@ namespace CuaHangXeMay.Forms
             this.lblMatKhau.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblMatKhau.Location = new System.Drawing.Point(40, 160);
             this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(86, 23);
+            this.lblMatKhau.Size = new System.Drawing.Size(71, 19);
             this.lblMatKhau.TabIndex = 3;
             this.lblMatKhau.Text = "Mật khẩu:";
             // 
@@ -103,7 +103,7 @@ namespace CuaHangXeMay.Forms
             this.lblTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblTaiKhoan.Location = new System.Drawing.Point(40, 90);
             this.lblTaiKhoan.Name = "lblTaiKhoan";
-            this.lblTaiKhoan.Size = new System.Drawing.Size(86, 23);
+            this.lblTaiKhoan.Size = new System.Drawing.Size(69, 19);
             this.lblTaiKhoan.TabIndex = 4;
             this.lblTaiKhoan.Text = "Tài khoản:";
             // 
@@ -111,9 +111,9 @@ namespace CuaHangXeMay.Forms
             // 
             this.lblTieuDe.AutoSize = true;
             this.lblTieuDe.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTieuDe.Location = new System.Drawing.Point(110, 30);
+            this.lblTieuDe.Location = new System.Drawing.Point(129, 20);
             this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(181, 37);
+            this.lblTieuDe.Size = new System.Drawing.Size(146, 30);
             this.lblTieuDe.TabIndex = 5;
             this.lblTieuDe.Text = "ĐĂNG NHẬP";
             // 
@@ -124,14 +124,14 @@ namespace CuaHangXeMay.Forms
             this.lblThongBaoLoi.ForeColor = System.Drawing.Color.Red;
             this.lblThongBaoLoi.Location = new System.Drawing.Point(40, 280);
             this.lblThongBaoLoi.Name = "lblThongBaoLoi";
-            this.lblThongBaoLoi.Size = new System.Drawing.Size(0, 20);
+            this.lblThongBaoLoi.Size = new System.Drawing.Size(0, 15);
             this.lblThongBaoLoi.TabIndex = 6;
             this.lblThongBaoLoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblThongBaoLoi.Visible = false;
             // 
             // FormDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(800, 450);

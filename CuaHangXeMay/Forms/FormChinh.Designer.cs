@@ -28,27 +28,22 @@ namespace CuaHangXeMay.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstGioHang = new System.Windows.Forms.ListBox();
             this.flpSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lblTimKiem = new System.Windows.Forms.Label();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.btnXoaSanPham = new System.Windows.Forms.Button();
+            this.btnXoaGioHang = new System.Windows.Forms.Button();
+            this.dgvGioHang = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGioHang)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lstGioHang
-            // 
-            this.lstGioHang.FormattingEnabled = true;
-            this.lstGioHang.ItemHeight = 20;
-            this.lstGioHang.Location = new System.Drawing.Point(12, 12);
-            this.lstGioHang.Name = "lstGioHang";
-            this.lstGioHang.Size = new System.Drawing.Size(230, 524);
-            this.lstGioHang.TabIndex = 0;
             // 
             // flpSanPham
             // 
             this.flpSanPham.AutoScroll = true;
-            this.flpSanPham.Location = new System.Drawing.Point(248, 48);
+            this.flpSanPham.Location = new System.Drawing.Point(264, 48);
             this.flpSanPham.Name = "flpSanPham";
-            this.flpSanPham.Size = new System.Drawing.Size(672, 488);
+            this.flpSanPham.Size = new System.Drawing.Size(656, 493);
             this.flpSanPham.TabIndex = 1;
             // 
             // txtTimKiem
@@ -56,44 +51,98 @@ namespace CuaHangXeMay.Forms
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtTimKiem.Location = new System.Drawing.Point(333, 12);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(587, 30);
+            this.txtTimKiem.Size = new System.Drawing.Size(587, 25);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // lblTimKiem
             // 
             this.lblTimKiem.AutoSize = true;
             this.lblTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblTimKiem.Location = new System.Drawing.Point(248, 15);
+            this.lblTimKiem.Location = new System.Drawing.Point(263, 14);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(79, 23);
+            this.lblTimKiem.Size = new System.Drawing.Size(64, 19);
             this.lblTimKiem.TabIndex = 3;
             this.lblTimKiem.Text = "Tìm kiếm";
             this.lblTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnThanhToan.Location = new System.Drawing.Point(12, 502);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(84, 39);
+            this.btnThanhToan.TabIndex = 4;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            // 
+            // btnXoaSanPham
+            // 
+            this.btnXoaSanPham.BackColor = System.Drawing.Color.Bisque;
+            this.btnXoaSanPham.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnXoaSanPham.Location = new System.Drawing.Point(102, 502);
+            this.btnXoaSanPham.Name = "btnXoaSanPham";
+            this.btnXoaSanPham.Size = new System.Drawing.Size(75, 39);
+            this.btnXoaSanPham.TabIndex = 5;
+            this.btnXoaSanPham.Text = "Xóa SP";
+            this.btnXoaSanPham.UseVisualStyleBackColor = false;
+            this.btnXoaSanPham.Click += new System.EventHandler(this.btnXoaSanPham_Click);
+            // 
+            // btnXoaGioHang
+            // 
+            this.btnXoaGioHang.BackColor = System.Drawing.Color.Salmon;
+            this.btnXoaGioHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnXoaGioHang.Location = new System.Drawing.Point(183, 502);
+            this.btnXoaGioHang.Name = "btnXoaGioHang";
+            this.btnXoaGioHang.Size = new System.Drawing.Size(75, 39);
+            this.btnXoaGioHang.TabIndex = 6;
+            this.btnXoaGioHang.Text = "Xóa GH";
+            this.btnXoaGioHang.UseVisualStyleBackColor = false;
+            this.btnXoaGioHang.Click += new System.EventHandler(this.btnXoaGioHang_Click);
+            // 
+            // dgvGioHang
+            // 
+            this.dgvGioHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGioHang.Location = new System.Drawing.Point(12, 14);
+            this.dgvGioHang.Name = "dgvGioHang";
+            this.dgvGioHang.ReadOnly = true;
+            this.dgvGioHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvGioHang.Size = new System.Drawing.Size(245, 482);
+            this.dgvGioHang.TabIndex = 7;
+            this.dgvGioHang.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvGioHang_CellFormatting);
+            // 
             // FormChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 553);
+            this.Controls.Add(this.dgvGioHang);
+            this.Controls.Add(this.btnXoaGioHang);
+            this.Controls.Add(this.btnXoaSanPham);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.lblTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.flpSanPham);
-            this.Controls.Add(this.lstGioHang);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormChinh";
             this.Text = "FormChinh";
             this.Load += new System.EventHandler(this.FormChinh_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGioHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lstGioHang;
         private System.Windows.Forms.FlowLayoutPanel flpSanPham;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label lblTimKiem;
+        private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.Button btnXoaSanPham;
+        private System.Windows.Forms.Button btnXoaGioHang;
+        private System.Windows.Forms.DataGridView dgvGioHang;
     }
 }

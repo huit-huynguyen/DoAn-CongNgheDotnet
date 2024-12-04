@@ -113,7 +113,6 @@
     <Compile Include="Models\DonHang.cs">
       <DependentUpon>CuaHangXe.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\KhachHang.cs">
       <DependentUpon>CuaHangXe.tt</DependentUpon>
     </Compile>

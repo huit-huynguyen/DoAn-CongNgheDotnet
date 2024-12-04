@@ -30,7 +30,7 @@ namespace CuaHangXeMay.Controls
         {
             this.HinhAnh = new System.Windows.Forms.PictureBox();
             this.TenSanPham = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThemVaoGio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HinhAnh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,33 +51,34 @@ namespace CuaHangXeMay.Controls
             this.TenSanPham.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.TenSanPham.Location = new System.Drawing.Point(10, 175);
             this.TenSanPham.Name = "TenSanPham";
-            this.TenSanPham.Size = new System.Drawing.Size(133, 48);
+            this.TenSanPham.Size = new System.Drawing.Size(133, 36);
             this.TenSanPham.TabIndex = 1;
             this.TenSanPham.Text = "** Tên xe **";
             this.TenSanPham.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button1
+            // btnThemVaoGio
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(10, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Đặt vào giỏ";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnThemVaoGio.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThemVaoGio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemVaoGio.Location = new System.Drawing.Point(10, 214);
+            this.btnThemVaoGio.Name = "btnThemVaoGio";
+            this.btnThemVaoGio.Size = new System.Drawing.Size(133, 37);
+            this.btnThemVaoGio.TabIndex = 2;
+            this.btnThemVaoGio.Text = "Thêm vào giỏ";
+            this.btnThemVaoGio.UseVisualStyleBackColor = false;
+            this.btnThemVaoGio.Click += new System.EventHandler(this.btnThemVaoGio_Click);
             // 
             // SanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnThemVaoGio);
             this.Controls.Add(this.TenSanPham);
             this.Controls.Add(this.HinhAnh);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SanPham";
-            this.Size = new System.Drawing.Size(154, 266);
+            this.Size = new System.Drawing.Size(154, 260);
             this.Load += new System.EventHandler(this.SanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HinhAnh)).EndInit();
             this.ResumeLayout(false);
@@ -88,6 +89,6 @@ namespace CuaHangXeMay.Controls
 
         private System.Windows.Forms.PictureBox HinhAnh;
         private System.Windows.Forms.Label TenSanPham;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThemVaoGio;
     }
 }
